@@ -1,0 +1,278 @@
+<body>   
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+         <a class="navbar-brand" href="/biomass/public/biomass">Bioenergy Database</a>
+        </div>
+        
+        <div class="navbar-collapse collapse">        
+                    
+          <ul class="nav navbar-nav navbar-right"> 
+             <li> 
+                                  
+                    <a href="/biomass/public/auth/admin/view/7">
+                    <span class="userNav">&nbsp;&nbsp;admin !  </span> </a> 
+                             </li> 
+             
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle">
+                <img src="/biomass/public/images/icons/settings.png" alt="Setting">
+                <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="divider"></li>
+                    <li><a href="#">Help</a></li>
+                    <li class="divider"></li>                 
+                      
+                     <li><a href="/biomass/public/auth/admin/view/7">
+                         Your Profile
+                         </a>
+                    </li>
+                                          <li><a href="/biomass/public/auth/index/logout">Sign Out</a></li>
+                                     </ul>
+            </li>
+          </ul>
+<!--           <form class="navbar-form navbar-right">
+            <input type="text" class="form-control" placeholder="Search...">
+          </form> -->
+        </div>
+      </div>
+    </div>
+    
+   <div class="container"> 
+       <div class="row">
+	        	<!-- Left Side Vertical Bar -->
+  	       <div class="col-md-2">  	   
+	        	    <div class="panel panel-default">
+                          
+                            <div class="panel-body">
+                                <div class="list-group">
+                                    <a href="/biomass/public/biomass/admin/index" class="list-group-item">
+                                        <span class="glyphicon glyphicon-ok-circle"></span>  <i class="fa fa-fw fa-calendar"></i>Potential Households for Stoves
+                                    </a>
+                                    <a href="/biomass/public/biomass/admin/index/1" class="list-group-item">
+                                         <span class="glyphicon glyphicon-ok-circle"></span> <i class="fa fa-fw fa-comment"></i> Households with stoves installed  
+                                    </a>
+                                    <a href="/biomass/public/biomass/admin/index/0" class="list-group-item">
+                                       <span class="glyphicon glyphicon-ok-circle"></span>   <i class="fa fa-fw fa-truck"></i> Households without stoves
+                                    </a>
+                                    
+                                    <a href="/biomass/public/biomass/briquet/index" class="list-group-item">
+                                      <span class="glyphicon glyphicon-ok-circle"></span>    <i class="fa fa-fw fa-truck"></i>Potential Sawmills for Briquetting
+                                    </a>
+                                    <a href="/biomass/public/biomass/briquet/index/1" class="list-group-item">
+                                      <span class="glyphicon glyphicon-ok-circle"></span>    <i class="fa fa-fw fa-money"></i> Sawmills with Briquetting Plant
+                                    </a>
+                                    <a href="/biomass/public/biomass/briquet/index/0" class="list-group-item">
+                                     <span class="glyphicon glyphicon-ok-circle"></span>     <i class="fa fa-fw fa-user"></i> Sawmills without Briquetting Plant
+                                    </a>
+                                    <a href="/biomass/public/biomass/plantation/index" class="list-group-item">
+                                      <span class="glyphicon glyphicon-ok-circle"></span>    <i class="fa fa-fw fa-check"></i> Plantation Journals
+                                    </a>
+                                    <a href="/biomass/public/auth/admin/index" class="list-group-item">
+                                      <span class="glyphicon glyphicon-ok-circle"></span>    <i class="fa fa-fw fa-globe"></i> List of Registered Users
+                                    </a>
+                                    <a href="/biomass/public/biomass/admin/report" class="list-group-item">
+                                      <span class="glyphicon glyphicon-ok-circle"></span>    <i class="fa fa-fw fa-check"></i> Reporting Options
+                                    </a>
+                                    
+                                    <a href="/biomass/public/biomass/admin/search" class="list-group-item">
+                                      <span class="glyphicon glyphicon-ok-circle"></span>    <i class="fa fa-fw fa-check"></i> Find the record
+                                    </a>
+                                </div>
+                               
+                            </div>
+                        </div>
+	         </div>
+	    
+	     <div class="col-md-8">  
+               <ul class="nav nav-tabs" id="myTab">
+  <li class="">
+  <a href="/biomass/public/biomass/admin/view/719">
+   Household Detail
+  </a></li>
+  <li class="">
+  <a href="/biomass/public/biomass/admin/map/719">
+   Location Map
+  </a></li>
+ <li class="active">
+  <a href="/biomass/public/biomass/admin/installstove/719">
+    Stove Details
+  </a></li>
+ <li class="">
+ <a href="/biomass/public/biomass/admin/update/719">
+  Edit Details
+ </a></li>
+ 
+  <li class="">
+ <a href="/biomass/public/biomass/admin/monitor/719">
+  Monitoring Info
+ </a></li>
+</ul> <form role="form" id="register-form" method="post" enctype="multipart/form-data">
+    <div class="row">
+                    <div class="col-lg-6"> 
+                        <h4>Stove's Information and Features</h4>
+          	                  
+          	<div class="form-group">
+                <label>Date of Construction</label>
+                <div class="input-group date form_date" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" size="16" type="text" value="" name="construction_date" readonly="">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                </div>
+				<input type="hidden" id="dtp_input2" value="" name="construction_date">
+            </div>  
+                 
+            <input type="hidden" name="household" value="719">
+                  
+             
+                 
+            <div class="form-group">
+                <label>Date of Completion</label>
+                <div class="input-group date form_date" data-date="" data-date-format="yyyy-mm-dd" data-link-field="dtp_input3" data-link-format="yyyy-mm-dd">
+                    <input class="form-control" size="16" type="text" value="" name="completion_date" readonly="">
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                </div>
+				<input type="hidden" id="dtp_input3" value="" name="completion_date">
+            </div>                            
+                <script type="text/javascript">   
+                    	$('.form_date').datetimepicker({
+                            weekStart: 1,
+                            todayBtn:  1,
+                    		autoclose: 1, 
+                    		todayHighlight: 1,
+                    		startView: 2,
+                    		minView: 2,
+                    		forceParse: 0
+                        });
+                         </script>
+                         
+                   <div class="form-group">
+                                <label>Type of stove</label>
+                                 <div class="checkbox">
+                                                                   <label class="checkbox-inline">
+                                    <input type="radio" name="stove_type[]" value="1"> 2 - Pot Stove                                 </label>
+                                                                   <label class="checkbox-inline">
+                                    <input type="radio" name="stove_type[]" value="2"> 3 - Pot Stove                                 </label>
+                                                                   <label class="checkbox-inline">
+                                    <input type="radio" name="stove_type[]" value="3"> Fodder stove                                 </label>
+                                                                   <label class="checkbox-inline">
+                                    <input type="radio" name="stove_type[]" value="4"> Heating Stove                                 </label>
+                                                                   <label class="checkbox-inline">
+                                    <input type="radio" name="stove_type[]" value="5"> Others                                 </label>
+                                                                 </div>
+                            </div>
+            
+                        <h4>physical Dimensions</h4>
+                             <div class="form-group input-group">
+                                <span class="input-group-addon">Length (cm)</span>
+                                <input class="form-control" type="text" id="length" name="length" placeholder="Enter Length" value="">
+                          </div>
+
+                             <div class="form-group input-group">
+                                <span class="input-group-addon">Breath (cm)</span>
+                                    <input class="form-control" type="text" id="breath" name="breath" placeholder="Enter Breath" value="">
+                           </div>                       
+                       
+                            <div class="form-group input-group">                           
+                                 <span class="input-group-addon">Height (cm)</span>
+                                <input class="form-control" type="text" id="height" name="height" placeholder="Enter Height" value="">
+                            </div>                            
+                       </div>
+                       
+                          <div class="col-lg-6">
+                            <h4>Stove's Metallic parts</h4>
+                            <br>
+                             <div class="form-group">
+                                                                    <div class="checkbox">                                 
+                                  <label class="checkbox">
+                                     <input type="checkbox" name="metallic[]" value="1">
+                                    1. Chimney with damper                                 </label>
+                               </div>
+                                                                 <div class="checkbox">                                 
+                                  <label class="checkbox">
+                                     <input type="checkbox" name="metallic[]" value="2">
+                                    2. Metallic plates                                 </label>
+                               </div>
+                                                                 <div class="checkbox">                                 
+                                  <label class="checkbox">
+                                     <input type="checkbox" name="metallic[]" value="3">
+                                    3. Fire Door                                 </label>
+                               </div>
+                                                                 <div class="checkbox">                                 
+                                  <label class="checkbox">
+                                     <input type="checkbox" name="metallic[]" value="4">
+                                    4. MS Flat                                 </label>
+                               </div>
+                                                                 <div class="checkbox">                                 
+                                  <label class="checkbox">
+                                     <input type="checkbox" name="metallic[]" value="5">
+                                    5. Metallic handle                                 </label>
+                               </div>
+                                                                 <div class="checkbox">                                 
+                                  <label class="checkbox">
+                                     <input type="checkbox" name="metallic[]" value="6">
+                                    6. Asbestos Board                                 </label>
+                               </div>
+                                  
+                            </div>  
+                            
+                            <div class="form-group">                           
+                                 <label>Additional Requirements (Specify)</label>
+                                 <textarea class="form-control" name="additional_parts" rows="2">                                                                    </textarea>
+                            </div>  
+                             
+                            
+                             <div class="form-group">                           
+                                 <label>Passport Photo of beneficiary</label>
+                                <input class="form-control" type="file" id="photo" name="photo">
+                            </div>              
+                          
+                        
+                            <div class="form-group">
+                                <label>Name of the installer</label>
+                                <input class="form-control" id="installer_name" name="installer_name" value="">
+                            </div>  
+                            
+                            <div class="form-group">
+                                <label>CID No. of the installer</label>
+                                <input class="form-control" id="installer_cid" name="installer_cid" value="">
+                            </div>  
+                           
+                            <div class="form-group">
+                                <label>Phone No. of the installer</label>
+                                <input class="form-control" id="installer_phone" name="installer_phone" value="">
+                            </div>   
+                            
+                          </div>
+                           <div class="form-group">
+                              <div class="col-sm-offset-7 col-sm-6">
+                                <button type="submit" class="btn btn-primary"><span class="glyphicon glyphicon-ok">&nbsp;</span>Save Details</button>
+                               &nbsp;&nbsp;&nbsp;
+                                <a href="/biomass/public/biomass/admin/installstove/719" class="btn btn-primary"><span class="glyphicon glyphicon-remove">&nbsp;</span>Cancel</a>
+                              </div>
+                          </div>
+   </div>
+</form> 
+        <!--  Displaying of flash messages  -->       
+                 
+             </div>
+             </div>
+             
+                         
+            <hr>
+            <footer>
+                <p>© 2014 Dept. of Renewable Energy, MoEA. All rights reserved.</p>
+            </footer>
+         </div><div class="datetimepicker datetimepicker-dropdown-bottom-right dropdown-menu" style="left: 1028.19px; z-index: 1070;"><div class="datetimepicker-minutes" style="display: none;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">11 February 2016</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="minute">3:00</span><span class="minute">3:05</span><span class="minute">3:10</span><span class="minute">3:15</span><span class="minute">3:20</span><span class="minute">3:25</span><span class="minute">3:30</span><span class="minute active">3:35</span><span class="minute">3:40</span><span class="minute">3:45</span><span class="minute">3:50</span><span class="minute">3:55</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">Today</th></tr></tfoot></table></div><div class="datetimepicker-hours" style="display: none;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">11 February 2016</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="hour">0:00</span><span class="hour">1:00</span><span class="hour">2:00</span><span class="hour active">3:00</span><span class="hour">4:00</span><span class="hour">5:00</span><span class="hour">6:00</span><span class="hour">7:00</span><span class="hour">8:00</span><span class="hour">9:00</span><span class="hour">10:00</span><span class="hour">11:00</span><span class="hour">12:00</span><span class="hour">13:00</span><span class="hour">14:00</span><span class="hour">15:00</span><span class="hour">16:00</span><span class="hour">17:00</span><span class="hour">18:00</span><span class="hour">19:00</span><span class="hour">20:00</span><span class="hour">21:00</span><span class="hour">22:00</span><span class="hour">23:00</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">Today</th></tr></tfoot></table></div><div class="datetimepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">February 2016</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr><tr><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th><th class="dow">Su</th></tr></thead><tbody><tr><td class="day old">25</td><td class="day old">26</td><td class="day old">27</td><td class="day old">28</td><td class="day old">29</td><td class="day old">30</td><td class="day old">31</td></tr><tr><td class="day">1</td><td class="day">2</td><td class="day">3</td><td class="day">4</td><td class="day">5</td><td class="day">6</td><td class="day">7</td></tr><tr><td class="day">8</td><td class="day">9</td><td class="day">10</td><td class="day today active">11</td><td class="day">12</td><td class="day">13</td><td class="day">14</td></tr><tr><td class="day">15</td><td class="day">16</td><td class="day">17</td><td class="day">18</td><td class="day">19</td><td class="day">20</td><td class="day">21</td></tr><tr><td class="day">22</td><td class="day">23</td><td class="day">24</td><td class="day">25</td><td class="day">26</td><td class="day">27</td><td class="day">28</td></tr><tr><td class="day">29</td><td class="day new">1</td><td class="day new">2</td><td class="day new">3</td><td class="day new">4</td><td class="day new">5</td><td class="day new">6</td></tr></tbody><tfoot><tr><th colspan="7" class="today">Today</th></tr></tfoot></table></div><div class="datetimepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">2016</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right active"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="month">Jan</span><span class="month">Feb</span><span class="month">Mar</span><span class="month">Apr</span><span class="month">May</span><span class="month">Jun</span><span class="month">Jul</span><span class="month">Aug</span><span class="month">Sep</span><span class="month">Oct</span><span class="month">Nov</span><span class="month">Dec</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">Today</th></tr></tfoot></table></div><div class="datetimepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">2010-2019</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year active">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year">2019</span><span class="year old">2020</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">Today</th></tr></tfoot></table></div></div><div class="datetimepicker datetimepicker-dropdown-bottom-right dropdown-menu" style="left: 1028.19px; z-index: 1110;"><div class="datetimepicker-minutes" style="display: none;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">11 February 2016</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="minute">3:00</span><span class="minute">3:05</span><span class="minute">3:10</span><span class="minute">3:15</span><span class="minute">3:20</span><span class="minute">3:25</span><span class="minute">3:30</span><span class="minute active">3:35</span><span class="minute">3:40</span><span class="minute">3:45</span><span class="minute">3:50</span><span class="minute">3:55</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">Today</th></tr></tfoot></table></div><div class="datetimepicker-hours" style="display: none;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">11 February 2016</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="hour">0:00</span><span class="hour">1:00</span><span class="hour">2:00</span><span class="hour active">3:00</span><span class="hour">4:00</span><span class="hour">5:00</span><span class="hour">6:00</span><span class="hour">7:00</span><span class="hour">8:00</span><span class="hour">9:00</span><span class="hour">10:00</span><span class="hour">11:00</span><span class="hour">12:00</span><span class="hour">13:00</span><span class="hour">14:00</span><span class="hour">15:00</span><span class="hour">16:00</span><span class="hour">17:00</span><span class="hour">18:00</span><span class="hour">19:00</span><span class="hour">20:00</span><span class="hour">21:00</span><span class="hour">22:00</span><span class="hour">23:00</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">Today</th></tr></tfoot></table></div><div class="datetimepicker-days" style="display: block;"><table class=" table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">February 2016</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr><tr><th class="dow">Mo</th><th class="dow">Tu</th><th class="dow">We</th><th class="dow">Th</th><th class="dow">Fr</th><th class="dow">Sa</th><th class="dow">Su</th></tr></thead><tbody><tr><td class="day old">25</td><td class="day old">26</td><td class="day old">27</td><td class="day old">28</td><td class="day old">29</td><td class="day old">30</td><td class="day old">31</td></tr><tr><td class="day">1</td><td class="day">2</td><td class="day">3</td><td class="day">4</td><td class="day">5</td><td class="day">6</td><td class="day">7</td></tr><tr><td class="day">8</td><td class="day">9</td><td class="day">10</td><td class="day today active">11</td><td class="day">12</td><td class="day">13</td><td class="day">14</td></tr><tr><td class="day">15</td><td class="day">16</td><td class="day">17</td><td class="day">18</td><td class="day">19</td><td class="day">20</td><td class="day">21</td></tr><tr><td class="day">22</td><td class="day">23</td><td class="day">24</td><td class="day">25</td><td class="day">26</td><td class="day">27</td><td class="day">28</td></tr><tr><td class="day">29</td><td class="day new">1</td><td class="day new">2</td><td class="day new">3</td><td class="day new">4</td><td class="day new">5</td><td class="day new">6</td></tr></tbody><tfoot><tr><th colspan="7" class="today">Today</th></tr></tfoot></table></div><div class="datetimepicker-months" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">2016</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right active"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="month">Jan</span><span class="month">Feb</span><span class="month">Mar</span><span class="month">Apr</span><span class="month">May</span><span class="month">Jun</span><span class="month">Jul</span><span class="month">Aug</span><span class="month">Sep</span><span class="month">Oct</span><span class="month">Nov</span><span class="month">Dec</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">Today</th></tr></tfoot></table></div><div class="datetimepicker-years" style="display: none;"><table class="table-condensed"><thead><tr><th class="prev" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-left"></span> </th><th colspan="5" class="switch">2010-2019</th><th class="next" style="visibility: visible;"><span class="glyphicon glyphicon-arrow-right"></span> </th></tr></thead><tbody><tr><td colspan="7"><span class="year old">2009</span><span class="year">2010</span><span class="year">2011</span><span class="year">2012</span><span class="year">2013</span><span class="year">2014</span><span class="year">2015</span><span class="year active">2016</span><span class="year">2017</span><span class="year">2018</span><span class="year">2019</span><span class="year old">2020</span></td></tr></tbody><tfoot><tr><th colspan="7" class="today">Today</th></tr></tfoot></table></div></div>
+
+            
+
+</body>

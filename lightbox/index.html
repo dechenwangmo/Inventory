@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="chrome=1">
+	<title>Bootstrap Image Lightbox with Tooltip</title>
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap-lightbox.min.css">
+	<link rel="stylesheet" href="assets/prettify/prettify.css">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<!--[if lt IE 9]>
+	<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body data-spy="scroll" data-target=".navbar">
+	<!-- -->
+	<section id="home">
+<div class="jumbotron masthead">
+	<div class="container">
+		<h1>View Fullscreen Image in Lightbox - Bootstrap</h1>
+		<p>Let your website visitors see images in full-screen</p>
+		<p><a href="https://github.com/codelearn-org/bootstrap-img-lightbox-tooltip" class="btn btn-primary btn-large">Download Bootstrap Image Lightbox Tooltip</a></p>
+		<ul class="masthead-links">
+			<li>Forked & design copied from @jbutz's <a href="http://github.com/jbutz/bootstrap-lightbox">Bootstrap Lightbox</a></li>
+		</ul>
+	</div>
+</div>
+
+	</section>
+
+	<section id="demo">
+<div class="container">
+	<div class="page-header">
+		<h1>Why the plugin <small> & See it in action!</small></h1>
+	</div>
+	<p>While running <a href="http://www.codelearn.org" target="_blank">Codelearn.org</a>, we had desperate need to view the images full-screen. Here is short story behind it.</p>
+	<p>Inside the <a href="http://www.codelearn.org/ruby-on-rails-tutorial" target="_blank">Rails Tutorial</a>, the content is on left & the Playground is on right. Earlier, the Playground was on a separate page & the content had the luxury to span the complete screen.</p>
+	<p>When we decided to combine the two views, the content on the left got pushed to a smaller width. Images faced the worst hit. Some of them were quite descriptive but became pretty 'squeezed' in the final layout.</p>
+	<p>For a long time we kept on searching for 'Jquery plugin to view images full screen'. There were no good matches. Once I visited <a href="http://www.fleetio.com/tour/">Fleetio Tour page</a> & found the images have 'view full screen' option. I quickly checked the DOM to figure out keywords 'lightbox' & 'bootstrap'. Googling for it landed me to the parent repo by @jbutz.</p>
+	<p>While it was good, I decided to further enhance it to have the following :-</p>
+	<ul>
+		<li>One line initialization like <code>$("img").img_lightbox_tooltip()</code> to apply the plugin to all images.</li>
+		<li>A tooltip that shows user to click on the image to enlarge it.</li>
+	</ul>
+
+	<!-- -->
+	<div class="example">
+		<ul class="thumbnails">
+			<li class="span2">
+				<img src="assets/img/large.png" alt="Click to view the lightbox">
+			</li>
+		</ul>
+		<div id="demoLightbox" class="lightbox hide fade"  tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-header" style="position:absolute; height:20px; left:100%; margin-left: 10px; padding:0; border:0;">
+				 <button type="button" class="close" style="color:white; font-size: 30px;" onclick='$("#demoLightbox").lightbox("hide")'>&times;</button>
+			</div>
+			<div class='lightbox-content'>
+				<img src="">
+			</div>
+		</div>
+	</div>
+	<!-- -->
+
+<p>Unlike the original repo which required one Lightbox every image/link, I created only one Lightbox. The 'img' tag source is kept empty & it got picked up from the image which is clicked.</p>
+
+<p>Copy paste the Lightbox div to your HTML page.</p>
+<pre class="prettyprint linenums">&lt;div id=&quot;demoLightbox&quot; class=&quot;lightbox hide fade&quot;  tabindex=&quot;-1&quot; role=&quot;dialog&quot; aria-hidden=&quot;true&quot;&gt;
+   &lt;div class="modal-header" 
+      style="position:absolute; height:20px; left:100%; margin-left: 10px; padding:0; border:0;"&gt;
+	 
+	 &lt;button type="button" class="close" 
+	   style="color:white; font-size: 30px;" 
+	   onclick='$("#demoLightbox").lightbox("hide")'&gt; &times; &lt;/button&gt;
+
+   &lt;/div&gt;
+   &lt;div class='lightbox-content'&gt;
+     &lt;img src=&quot;&quot;&gt;
+   &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+<!-- -->
+<div class="alert">
+<p><span class="label label-important">Hack Alert</span>&nbsp; The lightbox div id is hardcoded as 'demoLightbox' even inside plugin file. Also, the parent repo did not come with a button to close the lightbox/modal. I quickly hacked the close button from modal with some inline CSS & onclick to 'hackishly' do the job.</p>
+</div>
+
+	<p>Dont forget to add following javascript files for it to work.</p>
+<pre  class="prettyprint linenums">
+&lt;link rel="stylesheet" href="assets/css/bootstrap.min.css"&gt;
+&lt;link rel="stylesheet" href="assets/css/bootstrap-lightbox.min.css"&gt;
+
+&lt;script src="assets/js/bootstrap.js"&gt;&lt;/script&gt; &lt;!-- Or just bootstrap-tooltip.js --&gt;
+&lt;script src="assets/js/bootstrap-lightbox.js"&gt;&lt;/script&gt;
+&lt;script src="assets/js/bootstrap-img-lightbox-tooltip.js"&gt;&lt;/script&gt;
+</pre>
+
+<h3>Options</h3>
+<p>The plugin comes with some options described below. For a newbie, it can be called as :- </p>
+<pre> $("img").img_lightbox_tooltip({placement: "top", title: "custom tooltip message here"}) </pre>
+<p> like that.</p>
+	<table class="table table-bordered table-striped">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Type</th>
+				<th>Default</th>
+				<th>Description</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<td>placement</td>
+				<td>top | right | bottom | left</td>
+				<td>top</td>
+				<td>Where to place the tooltip.</td>
+			</tr>
+			<tr>
+				<td>tooltip_show</td>
+				<td>always | hover</td>
+				<td>always</td>
+				<td>When to show the tooltip.</td>
+			</tr>
+			<tr>
+				<td>title</td>
+				<td>string</td>
+				<td>click to enlarge</td>
+				<td>Self explainatory</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
+	<section style="margin-top: 50px; margin-bottom: 50px; height: 10px;">
+		<!-- Take up space -->
+	</section>
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/scale.fix.js"></script>
+	<script src="assets/prettify/prettify.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/bootstrap-lightbox.js"></script>
+	<script src="assets/js/bootstrap-img-lightbox-tooltip.js"></script>
+	<script>
+	$(document).ready(function()
+	{
+		prettyPrint();
+		$("img").img_lightbox_tooltip();
+	});
+	</script>
+</body>
+</html>
